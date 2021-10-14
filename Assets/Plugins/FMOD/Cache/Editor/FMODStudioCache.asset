@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4960124641831158215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ObstacleSound
+  m_EditorClassIdentifier: 
+  Path: event:/ObstacleSound
+  Guid:
+    Data1: 2047458237
+    Data2: 1304978479
+    Data3: -1074747728
+    Data4: -1429308135
+  Banks:
+  - {fileID: -4238771616831071589}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4238771616831071589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Assets/Xanderjam_Sounds/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637698521474571483
+  FileSizes:
+  - Name: Desktop
+    Value: 4384
+  Exists: 1
+--- !u!114 &-3256977210512286987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hit_Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Hit_Sound
+  Guid:
+    Data1: 1120314919
+    Data2: 1201110287
+    Data3: -31656297
+    Data4: -413298530
+  Banks:
+  - {fileID: 2524188114581450592}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 6205734311533835185}
+  - {fileID: -4238771616831071589}
+  - {fileID: 2524188114581450592}
+  EditorEvents:
+  - {fileID: -4960124641831158215}
+  - {fileID: -3256977210512286987}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -4238771616831071589}
+  StringsBanks:
+  - {fileID: 6205734311533835185}
+  cacheTime: 637698521474791933
+  cacheVersion: 9
+--- !u!114 &2524188114581450592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/New Bank.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Assets/Xanderjam_Sounds/Build/Desktop/New Bank.bank
+  Name: New Bank
+  StudioPath: bank:/New Bank
+  lastModified: 637698521474791933
+  FileSizes:
+  - Name: Desktop
+    Value: 2528
+  Exists: 1
+--- !u!114 &6205734311533835185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Assets/Xanderjam_Sounds/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637698521474591485
+  FileSizes:
+  - Name: Desktop
+    Value: 866
+  Exists: 1
