@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 gravityVector = new Vector2(0, -9.8f);
     private Quaternion targetAngle = Quaternion.Euler(0, 0, 0);
     private bool isTurned = false;
-    
+    private float horizontal;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -32,7 +32,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
+        if(!isTurned) horizontal = Input.GetAxisRaw("Horizontal");
+        else horizontal = -Input.GetAxisRaw("Horizontal");
 
         transform.position = new Vector3(transform.position.x + (horizontal * moveSpeed * Time.deltaTime), transform.position.y, 0);
 
@@ -50,7 +51,6 @@ public class PlayerController : MonoBehaviour
         }
 
         hourglass.rotation = Quaternion.Slerp(hourglass.rotation, targetAngle, Time.deltaTime);
-        Debug.Log(isTurned);
     }
 
     void ChangeRotation()
