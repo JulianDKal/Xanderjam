@@ -42,9 +42,9 @@ public class PlayerController : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.F))
         {
-            //gravityVector *= -1;
-            //Physics2D.gravity = gravityVector;
-            ChangeRotation();
+            gravityVector *= -1;
+            Physics2D.gravity = gravityVector;
+            //ChangeRotation();
             Debug.Log("F Key pressed");
         }
 
