@@ -38,13 +38,14 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            if(!isTurned) rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            else rb.AddForce(new Vector2(0, -jumpForce), ForceMode2D.Impulse);
         }
         if(Input.GetKeyDown(KeyCode.F))
         {
             gravityVector *= -1;
             Physics2D.gravity = gravityVector;
-            //ChangeRotation();
+            ChangeRotation();
             Debug.Log("F Key pressed");
         }
 

@@ -1016,7 +1016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 9
   jumpForce: 10
-  hourglass: {fileID: 949354012}
+  hourglass: {fileID: 705021696}
 --- !u!212 &1926902195
 SpriteRenderer:
   m_ObjectHideFlags: 0
