@@ -1,12 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 //using Cinemachine;
 
 namespace JuJu {
 
 public class PlayerController : MonoBehaviour
 {
+    //fields for the player HUD
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
+    [SerializeField]
+    private TextMeshProUGUI timerText;
+    public int maxTime;
+    private float currentTime;
+    private int score;
 
     //variables visibile in the inspector
     [SerializeField]
@@ -28,6 +38,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Physics.gravity = gravityVector;
         cam = Camera.main;
+        currentTime = maxTime;
     }
 
     void Update()
@@ -48,6 +59,12 @@ public class PlayerController : MonoBehaviour
             Physics2D.gravity = gravityVector;
             ChangeRotation();
             Debug.Log("F Key pressed");
+        }
+        currentTime -= Time.deltaTime;
+        timerText.text = Convert.ToString((int)currentTime);
+        if(currentTime <= 0)
+        {
+            Game_Manager.instance.GameOver();
         }
 
         hourglass.rotation = Quaternion.Slerp(hourglass.rotation, targetAngle, Time.deltaTime);
