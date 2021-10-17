@@ -19,37 +19,27 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public Vector2 checkSize;
 
-    bool isDashing;
-    [HideInInspector]
-    public bool canDash;
-    public float dashTime;
-    float dashTime_;
-    public float dashSpeed;
 
     public int cayoty;
     int cayotyTimer;
     public int remember;
     int rememberTimer;
 
-    Animator anim;
-    [HideInInspector]
-    public bool jumpTrigger = false;
+    //Animator anim;
 
 
     //Get veriables
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
     }
 
     //Animation/jumping
     private void Update()
     {
-        jumpTrigger = false;
-        anim.SetFloat("SpeedY", rb.velocity.y);
-        anim.SetBool("IsGrounded", isGrounded);
-        anim.SetBool("isDashing", isDashing);
+        //anim.SetFloat("SpeedY", rb.velocity.y);
+        //anim.SetBool("IsGrounded", isGrounded);
 
         if (rb.velocity.x > 0.2)
         {
@@ -70,32 +60,20 @@ public class PlayerMovement : MonoBehaviour
         if(isGrounded)
         {
             rememberTimer = remember;
-            canDash = true;
         }
 
-        isGrounded = Physics2D.OverlapBox(groundCheck.position, checkSize, 0, whatIsGround);
+        isGrounded = Physics2D.OverlapBox(groundCheck.position, checkSize, whatIsGround);
         if (cayotyTimer > 0 && rememberTimer > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             cayotyTimer = 0;
             rememberTimer = 0;
-            jumpTrigger = true;
         }
 
         if(Input.GetButtonUp("Jump") && rb.velocity.y > 0.1f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpCutoff);
-        }
-
-        if(Input.GetButtonDown("Dash") && canDash)
-        {
-            rb.gravityScale = 0;
-            rb.velocity = new Vector2(0, 0);
-            isDashing = true;
-            dashTime_ = dashTime;
-            canDash = false;
-
-        }
+        }     
     }
     //Execute code
     private void FixedUpdate()
@@ -104,27 +82,7 @@ public class PlayerMovement : MonoBehaviour
     }
     //Movement
     void Move()
-    {     
-        //dashing
-        if(dashTime_ < 0)
-        {
-            isDashing = false;
-            rb.gravityScale = 4;
-        }
-
-        if(isDashing)
-        {
-            if (transform.eulerAngles.y == 0)
-            {
-                rb.velocity = new Vector2(dashSpeed, 0);
-            }
-            if (transform.eulerAngles.y == 180)
-            {
-                rb.velocity = new Vector2(-dashSpeed, 0);
-            }
-            dashTime_ -= Time.deltaTime;
-            return;
-        }
+    {            
         //Clamp Y speed
         float velY = Mathf.Clamp(rb.velocity.y, -maxYSpeed, float.MaxValue);
 
