@@ -26,8 +26,7 @@ public class PlayerMovement : MonoBehaviour
     [Range(0, 1)]
     public float jumpCutoff;
     public float maxYSpeed;
-    [HideInInspector]
-    public bool isGrounded;
+    bool isGrounded;
     public LayerMask whatIsGround;
 
 
@@ -36,23 +35,36 @@ public class PlayerMovement : MonoBehaviour
     public int remember;
     int rememberTimer;
 
-    //Animator anim;
+    SpriteRenderer sr;
+    public Sprite defalut;
+    public Sprite jump;
+    public Sprite fall;
 
 
     //Get veriables
     private void Awake()
     {
+        sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         currentTime = maxTime;
         col = GetComponent<Collider2D>();
-        //anim = GetComponent<Animator>();
     }
 
     //Animation/jumping
     private void Update()
     {
-        //anim.SetFloat("SpeedY", rb.velocity.y);
-        //anim.SetBool("IsGrounded", isGrounded);
+        if(!isGrounded && rb.velocity.y > 0.3)
+        {
+            sr.sprite = jump;
+        }
+        else if (!isGrounded && rb.velocity.y < -0.3)
+        {
+            sr.sprite = fall;
+        }
+        else
+        {
+            sr.sprite = defalut;
+        }
 
         if (rb.velocity.x > 0.2)
         {
@@ -75,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
             rememberTimer = remember;
         }
 
-        isGrounded = Physics2D.BoxCast(col.bounds.center, col.bounds.size, 0f, Vector2.down, 2f, whatIsGround);
+        isGrounded = Physics2D.BoxCast(col.bounds.center, col.bounds.size, 0f, Vector2.down, .6f, whatIsGround);
         Debug.DrawRay(col.bounds.center, Vector2.down * 5, Color.green);
         //Physics2D.OverlapBox(groundCheck.position, checkSize, whatIsGround);
         if (cayotyTimer > 0 && rememberTimer > 0)
