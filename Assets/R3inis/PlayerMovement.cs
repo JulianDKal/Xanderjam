@@ -29,8 +29,6 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector]
     public bool isGrounded;
     public LayerMask whatIsGround;
-    public Transform groundCheck;
-    public Vector2 checkSize;
 
 
     public int cayoty;

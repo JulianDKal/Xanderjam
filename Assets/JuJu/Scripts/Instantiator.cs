@@ -27,6 +27,9 @@ public class Instantiator : MonoBehaviour
         StartCoroutine("InstantiateCrack");
     }
 
+    private void Update() {
+        Time.timeScale = 1+ (0.2f * cracksActive);
+    }
 
     private IEnumerator InstantiateCrack()
     {

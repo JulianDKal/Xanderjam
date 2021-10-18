@@ -1204,6 +1204,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8578841159330225570, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
+      propertyPath: jumpForce
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578841159330225570, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
+      propertyPath: acseleration
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578841159330225570, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
       propertyPath: whatIsGround.m_Bits
       value: 8
       objectReference: {fileID: 0}
@@ -1218,6 +1226,10 @@ PrefabInstance:
     - target: {fileID: 8684377370909571202, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684377370909571206, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
+      propertyPath: m_Mass
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8684377370909571207, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
       propertyPath: m_RootOrder
