@@ -4,6 +4,24 @@ using UnityEngine;
 
 public class Instantiator : MonoBehaviour
 {
+    public static Instantiator instance;
+
+    private void Awake() {
+        instance = this;
+    }
+
+    public Dictionary<string, Queue<GameObject>> objectDictionary;
+
+    [System.Serializable]
+    public class Pool
+    {
+        public string tag;
+        public GameObject prefabToSpawn;
+        public int size;
+    }
+
+    public List<Pool> pools;
+
     [SerializeField]
     private GameObject crack;
 
@@ -17,6 +35,21 @@ public class Instantiator : MonoBehaviour
 
     void Start()
     {
+        objectDictionary = new Dictionary<string, Queue<GameObject>>();
+
+        foreach (Pool pool in pools)
+        {
+            Queue<GameObject> objectQueue = new Queue<GameObject>();
+            for (int i = 0; i < pool.size; i++)
+            {
+                GameObject newSpawnObj = Instantiate(pool.prefabToSpawn);
+                newSpawnObj.SetActive(false);
+                objectQueue.Enqueue(newSpawnObj);
+            }
+
+            objectDictionary.Add(pool.tag, objectQueue);
+        }
+        
         cracksActive = 0;
         col = GetComponent<Collider2D>();
         minPosX = col.bounds.center.x - col.bounds.extents.x;
@@ -27,8 +60,20 @@ public class Instantiator : MonoBehaviour
         StartCoroutine("InstantiateCrack");
     }
 
+    public void SpawnObjectFromPool(string tag, Vector2 spawnPos, Quaternion rotation)
+    {
+        if(!objectDictionary.ContainsKey(tag)) return;
+
+        GameObject newObj = objectDictionary[tag].Dequeue();
+        newObj.SetActive(true);
+        newObj.transform.position = spawnPos;
+        newObj.transform.rotation = rotation;
+
+        objectDictionary[tag].Enqueue(newObj);
+    }
+
     private void Update() {
-        Time.timeScale = 1+ (0.2f * cracksActive);
+        //Time.timeScale = 1+ (0.2f * cracksActive);
     }
 
     private IEnumerator InstantiateCrack()
@@ -49,4 +94,6 @@ public class Instantiator : MonoBehaviour
         }
         
     }
+
+
 }
