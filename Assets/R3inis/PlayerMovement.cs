@@ -1,9 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    //fields for the player HUD
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
+    [SerializeField]
+    private TextMeshProUGUI timerText;
+    public int maxTime;
+    private float currentTime;
+    private int score;
+
     public float acseleration;
     [Range(0,1)]
     public float friction;
@@ -32,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        currentTime = maxTime;
         //anim = GetComponent<Animator>();
     }
 
@@ -74,6 +87,13 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpCutoff);
         }     
+
+        currentTime -= Time.deltaTime;
+        timerText.text = Convert.ToString((int)currentTime);
+        if(currentTime <= 0)
+        {
+            Game_Manager.instance.GameOver();
+        }
     }
     //Execute code
     private void FixedUpdate()
