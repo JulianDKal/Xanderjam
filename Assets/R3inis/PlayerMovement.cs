@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     [Range(0,1)]
     public float friction;
     Rigidbody2D rb;
+    private Collider2D col;
 
     public float jumpForce;
     [Range(0, 1)]
@@ -45,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentTime = maxTime;
+        col = GetComponent<Collider2D>();
         //anim = GetComponent<Animator>();
     }
 
@@ -75,7 +77,9 @@ public class PlayerMovement : MonoBehaviour
             rememberTimer = remember;
         }
 
-        isGrounded = Physics2D.OverlapBox(groundCheck.position, checkSize, whatIsGround);
+        isGrounded = Physics2D.BoxCast(col.bounds.center, col.bounds.size, 0f, Vector2.down, 2f, whatIsGround);
+        Debug.DrawRay(col.bounds.center, Vector2.down * 5, Color.green);
+        //Physics2D.OverlapBox(groundCheck.position, checkSize, whatIsGround);
         if (cayotyTimer > 0 && rememberTimer > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -85,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButtonUp("Jump") && rb.velocity.y > 0.1f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpCutoff);
+            if(isGrounded) rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpCutoff);
         }     
 
         currentTime -= Time.deltaTime;
@@ -93,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
         if(currentTime <= 0)
         {
             Game_Manager.instance.GameOver();
-        }
+        };
     }
     //Execute code
     private void FixedUpdate()
