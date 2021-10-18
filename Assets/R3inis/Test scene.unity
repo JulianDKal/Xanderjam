@@ -123,6 +123,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &99946595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 99946596}
+  m_Layer: 0
+  m_Name: GroundCHeck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &99946596
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99946595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.54, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1675838046}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &344862138
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!331 &344862139
 SpriteMask:
   m_ObjectHideFlags: 0
@@ -220,7 +250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!331 &562189201
 SpriteMask:
   m_ObjectHideFlags: 0
@@ -301,7 +331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!331 &599318680
 SpriteMask:
   m_ObjectHideFlags: 0
@@ -661,7 +691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!331 &1450511676
 SpriteMask:
   m_ObjectHideFlags: 0
@@ -739,6 +769,7 @@ GameObject:
   - component: {fileID: 1675838044}
   - component: {fileID: 1675838043}
   - component: {fileID: 1675838047}
+  - component: {fileID: 1675838048}
   m_Layer: 0
   m_Name: Player_0
   m_TagString: Untagged
@@ -769,7 +800,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675838042}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71adc90a885165544a9de0096f36c98c, type: 3}
   m_Name: 
@@ -839,9 +870,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675838042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.68, y: 0.02, z: 0}
+  m_LocalPosition: {x: -2.186, y: -0.708, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 99946596}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -866,6 +898,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1675838048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675838042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f721f9c149fe44baabe09d2c5351f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acseleration: 2
+  friction: 0.5
+  jumpForce: 12
+  jumpCutoff: 0.5
+  maxYSpeed: 6
+  isGrounded: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1
+  groundCheck: {fileID: 99946596}
+  checkSize: {x: 0.4, y: 0.2}
+  cayoty: 2
+  remember: 2
 --- !u!1 &1781902580
 GameObject:
   m_ObjectHideFlags: 0

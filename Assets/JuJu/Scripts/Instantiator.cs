@@ -41,7 +41,8 @@ public class Instantiator : MonoBehaviour
             }
 
             GameObject newCrack = Instantiate(crack, instantiatePoint, Quaternion.identity);
-            
+            cracksActive++;
+            Debug.Log(cracksActive);
         }
         
     }
