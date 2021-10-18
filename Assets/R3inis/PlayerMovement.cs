@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     int cayotyTimer;
     public int remember;
     int rememberTimer;
+    private int jumpCount;
 
     SpriteRenderer sr;
     public Sprite defalut;
@@ -53,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
     //Animation/jumping
     private void Update()
     {
+        if(isGrounded) jumpCount = 0;
         if(!isGrounded && rb.velocity.y > 0.3)
         {
             sr.sprite = jump;
@@ -82,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         {
             cayotyTimer = cayoty;
         }
-        if(isGrounded)
+        if(jumpCount < 1)
         {
             rememberTimer = remember;
         }
@@ -95,11 +97,12 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             cayotyTimer = 0;
             rememberTimer = 0;
+            jumpCount++;
         }
 
         if(Input.GetButtonUp("Jump") && rb.velocity.y > 0.1f)
         {
-            if(isGrounded) rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpCutoff);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpCutoff);
         }     
 
         currentTime -= Time.deltaTime;
