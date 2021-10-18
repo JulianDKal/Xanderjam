@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: FMOD_Assets/Xanderjam_Sounds/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637698521474571483
+  lastModified: 637701158940992271
   FileSizes:
   - Name: Desktop
-    Value: 4384
+    Value: 2904288
   Exists: 1
 --- !u!114 &-3256977210512286987
 MonoBehaviour:
@@ -93,12 +93,14 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -4960124641831158215}
   - {fileID: -3256977210512286987}
+  - {fileID: 4025902877794929111}
+  - {fileID: 7214423057171597750}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4238771616831071589}
   StringsBanks:
   - {fileID: 6205734311533835185}
-  cacheTime: 637698521474791933
+  cacheTime: 637701158941464313
   cacheVersion: 9
 --- !u!114 &2524188114581450592
 MonoBehaviour:
@@ -115,11 +117,39 @@ MonoBehaviour:
   Path: FMOD_Assets/Xanderjam_Sounds/Build/Desktop/New Bank.bank
   Name: New Bank
   StudioPath: bank:/New Bank
-  lastModified: 637698521474791933
+  lastModified: 637701158941464313
   FileSizes:
   - Name: Desktop
-    Value: 2528
+    Value: 2901760
   Exists: 1
+--- !u!114 &4025902877794929111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Lab_Antics_Master_2
+  m_EditorClassIdentifier: 
+  Path: event:/Lab_Antics_Master_2
+  Guid:
+    Data1: -139405207
+    Data2: 1174704943
+    Data3: 1566420881
+    Data4: 2005521443
+  Banks:
+  - {fileID: -4238771616831071589}
+  - {fileID: 2524188114581450592}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6205734311533835185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,8 +165,35 @@ MonoBehaviour:
   Path: FMOD_Assets/Xanderjam_Sounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637698521474591485
+  lastModified: 637701158941012274
   FileSizes:
   - Name: Desktop
-    Value: 866
+    Value: 952
   Exists: 1
+--- !u!114 &7214423057171597750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/music
+  m_EditorClassIdentifier: 
+  Path: event:/music
+  Guid:
+    Data1: -1839365979
+    Data2: 1215024612
+    Data3: -901577323
+    Data4: 1797683638
+  Banks:
+  - {fileID: -4238771616831071589}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

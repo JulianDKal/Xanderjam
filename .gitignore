@@ -43,3 +43,4 @@ Logs/shadercompiler-UnityShaderCompiler.exe0.log
 *.log
 *.log
 Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset
+Logs/AssetImportWorker0.log

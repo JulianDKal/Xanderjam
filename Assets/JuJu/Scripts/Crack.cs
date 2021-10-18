@@ -35,13 +35,16 @@ public class Crack : MonoBehaviour
                 crackHealth--;
                 if(crackHealth <= 0) {
                     Destroy(gameObject);
+                    Instantiator.cracksActive--;
+                    Debug.Log(Instantiator.cracksActive);
                     return;
                     }
                 GetComponent<SpriteRenderer>().sprite = crackVersions[crackHealth -1];
-                Debug.Log(crackHealth);
+                //Debug.Log(crackHealth);
             }
         }
     }
+
 
 
 }
