@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 //using Cinemachine;
-
+//hi, this is david, I think that it would be smarter to put some of these functions into a game manager script to keep things more organized
 namespace JuJu {
 
 public class PlayerController : MonoBehaviour
