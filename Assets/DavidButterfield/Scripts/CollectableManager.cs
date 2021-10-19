@@ -13,9 +13,9 @@ public class CollectableManager : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "circle")
+        if (other.tag == "Collectable")
         {
-            Destroy(other);
+            Destroy(other.gameObject);
             playerScore = playerScore + 1;
             scoreText.text = playerScore.ToString();
         }
