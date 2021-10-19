@@ -160,7 +160,7 @@ MonoBehaviour:
   maxYSpeed: 6
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 200
   cayoty: 2
   remember: 2
   defalut: {fileID: 21300000, guid: 3f89a079781818a42b09a58ee1edcc61, type: 3}

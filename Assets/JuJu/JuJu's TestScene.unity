@@ -241,7 +241,7 @@ PlatformEffector2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96689614}
   m_Enabled: 1
-  m_UseColliderMask: 1
+  m_UseColliderMask: 0
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -447,7 +447,7 @@ PlatformEffector2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108985611}
   m_Enabled: 1
-  m_UseColliderMask: 1
+  m_UseColliderMask: 0
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -611,7 +611,7 @@ PlatformEffector2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200956327}
   m_Enabled: 1
-  m_UseColliderMask: 1
+  m_UseColliderMask: 0
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -746,7 +746,7 @@ AreaEffector2D:
     m_Bits: 4294967295
   m_UseGlobalAngle: 0
   m_ForceAngle: 225
-  m_ForceMagnitude: 10
+  m_ForceMagnitude: 13
   m_ForceVariation: 0
   m_ForceTarget: 0
   m_Drag: 0
@@ -1500,7 +1500,7 @@ PlatformEffector2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820287595}
   m_Enabled: 1
-  m_UseColliderMask: 1
+  m_UseColliderMask: 0
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2138,7 +2138,7 @@ GameObject:
   - component: {fileID: 1338748455}
   - component: {fileID: 1338748454}
   - component: {fileID: 1338748453}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2703,7 +2703,7 @@ AreaEffector2D:
     m_Bits: 4294967295
   m_UseGlobalAngle: 0
   m_ForceAngle: 315
-  m_ForceMagnitude: 10
+  m_ForceMagnitude: 13
   m_ForceVariation: 0
   m_ForceTarget: 0
   m_Drag: 0
@@ -2794,7 +2794,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763339784}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 550150006945b614eae24220704ad790, type: 3}
   m_Name: 
@@ -2880,10 +2880,10 @@ PlatformEffector2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802378822}
   m_Enabled: 1
-  m_UseColliderMask: 1
+  m_UseColliderMask: 0
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
