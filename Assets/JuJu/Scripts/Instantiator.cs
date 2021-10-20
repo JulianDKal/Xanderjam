@@ -26,6 +26,8 @@ public class Instantiator : MonoBehaviour
 
     [SerializeField]
     private GameObject crack;
+    [SerializeField]
+    private float timeUntilNewCrack = 6;
 
     public static int cracksActive = 0;
 
@@ -85,7 +87,7 @@ public class Instantiator : MonoBehaviour
     {
         while(true)
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(timeUntilNewCrack);
 
             Vector2 instantiatePoint = new Vector2(Random.Range(minPosX, maxPosX), Random.Range(minPosY, maxPosY));
             while(!(col.OverlapPoint(instantiatePoint) && instantiatePoint.y <= col.bounds.center.y))
@@ -95,7 +97,7 @@ public class Instantiator : MonoBehaviour
 
             GameObject newCrack = Instantiate(crack, instantiatePoint, Quaternion.identity);
             cracksActive++;
-            Debug.Log(cracksActive);
+            //Debug.Log(cracksActive);
         }
         
     }
