@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7b7380e4-1ebf-4b9b-9362-6cbc7e1b9f8d}">
+		<property name="assetPath">
+			<value>MENU-LEVELSELECT04.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.062902494331065761</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{823741ff-2aea-48fc-a71e-3dd34bbceb5c}</destination>
+		</relationship>
+	</object>
+</objects>
