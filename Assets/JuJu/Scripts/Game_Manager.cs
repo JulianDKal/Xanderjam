@@ -10,7 +10,7 @@ public class Game_Manager : MonoBehaviour
     private bool gameIsPaused;
 
     private void Awake() {
-        if(instance != null)
+        if(instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -31,7 +31,8 @@ public class Game_Manager : MonoBehaviour
 
     public void GameOver()
     {
-        SceneManager.LoadSceneAsync("GameOver");
+        Time.timeScale = 0f;
+        SceneManager.LoadSceneAsync("GameOver", LoadSceneMode.Additive);
     }
 
     public void Pause()

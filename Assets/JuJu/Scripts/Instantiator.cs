@@ -21,9 +21,13 @@ public class Instantiator : MonoBehaviour
     }
 
     public List<Pool> pools;
+    private int objectIndex = 0;
+    private GameObject newObj;
 
     [SerializeField]
     private GameObject crack;
+    [SerializeField]
+    private float timeUntilNewCrack = 6;
 
     public static int cracksActive = 0;
 
@@ -66,12 +70,13 @@ public class Instantiator : MonoBehaviour
 
         if(objectDictionary[tag].Count != 0)
         {
-        GameObject newObj = objectDictionary[tag].Dequeue();
+            objectIndex++;
+        newObj = objectDictionary[tag].Dequeue();
         newObj.SetActive(true);
         newObj.transform.position = spawnPos;
         newObj.transform.rotation = rotation;
         }
-        //objectDictionary[tag].Enqueue(newObj);
+        if(objectIndex % 3 == 0) objectDictionary[tag].Enqueue(newObj);
     }
 
     private void Update() {
@@ -82,7 +87,7 @@ public class Instantiator : MonoBehaviour
     {
         while(true)
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(timeUntilNewCrack);
 
             Vector2 instantiatePoint = new Vector2(Random.Range(minPosX, maxPosX), Random.Range(minPosY, maxPosY));
             while(!(col.OverlapPoint(instantiatePoint) && instantiatePoint.y <= col.bounds.center.y))
@@ -92,7 +97,7 @@ public class Instantiator : MonoBehaviour
 
             GameObject newCrack = Instantiate(crack, instantiatePoint, Quaternion.identity);
             cracksActive++;
-            Debug.Log(cracksActive);
+            //Debug.Log(cracksActive);
         }
         
     }

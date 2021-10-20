@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private TextMeshProUGUI scoreText;
     [SerializeField]
     private TextMeshProUGUI timerText;
+    [SerializeField]
+    private TextMeshProUGUI crackText;
     public int maxTime;
     private float currentTime;
     private int score;
@@ -105,11 +107,14 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpCutoff);
         }     
 
-        currentTime -= Time.deltaTime;
+        crackText.text = Instantiator.cracksActive.ToString();
+
+        currentTime -= Time.deltaTime * (float)(1 + ( 0.25 * Instantiator.cracksActive));
         timerText.text = Convert.ToString((int)currentTime);
-        if(currentTime <= 0)
+        if(currentTime == 0)
         {
             Game_Manager.instance.GameOver();
+            //return;
         };
     }
     //Execute code
