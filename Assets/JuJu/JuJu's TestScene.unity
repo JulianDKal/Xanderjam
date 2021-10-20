@@ -1268,7 +1268,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.094069466, g: 0.07155571, b: 0.2264151, a: 0}
+  m_BackGroundColor: {r: 0.07208972, g: 0.5526284, b: 0.5660378, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2085,7 +2085,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8578841159330225570, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
       propertyPath: whatIsGround.m_Bits
-      value: 200
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684377370909571200, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684377370909571200, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684377370909571200, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8684377370909571201, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
       propertyPath: hourglass

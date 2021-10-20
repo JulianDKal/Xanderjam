@@ -29,6 +29,10 @@ public class CollectableManager : MonoBehaviour
             playerScore = playerScore + 1;
             scoreText.text = playerScore.ToString();
         }
+        if(other.CompareTag("Obstacle"))
+        {
+            StartCoroutine("TakeDamage");
+        }
         
     }
 
@@ -39,5 +43,17 @@ public class CollectableManager : MonoBehaviour
             yield return new WaitForSeconds(timeInBetween);
             Instantiate(collectablePrefab, platforms[Random.Range(0, platforms.Length)].position + Vector3.up, Quaternion.identity);
         }
+    }
+
+    IEnumerator TakeDamage()
+    {
+        GetComponent<SpriteRenderer>().color = Color.red;
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(2, 2), ForceMode2D.Impulse);
+        GetComponent<PlayerMovement>().enabled = false;
+
+        yield return new WaitForSeconds(1.5f);
+        GetComponent<SpriteRenderer>().color = Color.white;
+        GetComponent<PlayerMovement>().enabled = true;
+
     }
 }
