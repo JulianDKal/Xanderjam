@@ -1508,6 +1508,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &832172811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 832172813}
+  - component: {fileID: 832172812}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &832172812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832172811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13db6ea70aa0a0c4a952de85f5ed7b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &832172813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832172811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1088.8644, y: 532.8937, z: -1660.1605}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &904542751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,6 +2020,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 676728235006964336, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
+      propertyPath: timeInBetween
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 676728235006964336, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
       propertyPath: platforms.Array.data[0]
       value: 
       objectReference: {fileID: 96689616}
@@ -2023,6 +2070,10 @@ PrefabInstance:
     - target: {fileID: 6505577977405493840, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578841159330225570, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
+      propertyPath: maxTime
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8578841159330225570, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
       propertyPath: jumpForce
@@ -2155,7 +2206,7 @@ GameObject:
   - component: {fileID: 1338748453}
   m_Layer: 7
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: bottom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2766,7 +2817,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1731733435
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2835,7 +2886,7 @@ GameObject:
   - component: {fileID: 1763339786}
   - component: {fileID: 1763339785}
   m_Layer: 0
-  m_Name: SandSpawner
+  m_Name: ObjectSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2853,6 +2904,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 550150006945b614eae24220704ad790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacle: {fileID: 7272460662486589723, guid: cd4e82589cde1e3498dd5a45c3d389f0, type: 3}
+  timeBetweenObstacles: 2
 --- !u!4 &1763339786
 Transform:
   m_ObjectHideFlags: 0
@@ -3225,7 +3278,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: NaN, y: NaN, z: NaN, w: NaN}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
