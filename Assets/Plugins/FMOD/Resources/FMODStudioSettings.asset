@@ -207,8 +207,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: FMOD_Assets/Xanderjam_Sounds/Xanderjam_Sounds.fspro
-  sourceBankPath: FMOD_Assets/Xanderjam_Sounds/Build
+  sourceProjectPath: Assets/Arani/HourglassJam/HourglassJam.fspro
+  sourceBankPath: Assets/Arani/HourglassJam/Build
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -232,8 +232,7 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  Banks:
-  - New Bank
+  Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

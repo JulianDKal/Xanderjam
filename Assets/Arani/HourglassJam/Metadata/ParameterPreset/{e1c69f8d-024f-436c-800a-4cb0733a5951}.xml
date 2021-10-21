@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{e1c69f8d-024f-436c-800a-4cb0733a5951}">
+		<property name="name">
+			<value>Fanfare</value>
+		</property>
+		<relationship name="folder">
+			<destination>{692491f8-1705-4799-971d-8884e8358346}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{937901d5-f7ab-4d5f-86ea-13833caf3c42}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{937901d5-f7ab-4d5f-86ea-13833caf3c42}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

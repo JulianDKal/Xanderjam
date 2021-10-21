@@ -9,6 +9,8 @@ public class Crack : MonoBehaviour
     ///causing it to display another image. 
     ///</summary>
 
+    private FMOD.Studio.EventInstance repairInstance;
+
     public Sprite[] crackVersions; //An array of the different versions of a crack
     public GameObject player;
 
@@ -32,6 +34,9 @@ public class Crack : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.R))
             {
+                repairInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Gameplay SFX/Glass Repair");
+                repairInstance.start();
+                repairInstance.release();
                 crackHealth--;
                 if(crackHealth <= 0) {
                     Destroy(gameObject);

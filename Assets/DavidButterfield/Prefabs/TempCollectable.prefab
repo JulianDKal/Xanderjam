@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6492800331646094419}
   - component: {fileID: 4736316134016517146}
   - component: {fileID: 1626661016241582821}
+  - component: {fileID: -271119684218072018}
   m_Layer: 0
   m_Name: TempCollectable
   m_TagString: Collectable
@@ -99,3 +100,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.6
+--- !u!114 &-271119684218072018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6212816256424567035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  EventReference:
+    Guid:
+      Data1: -664185537
+      Data2: 1116040797
+      Data3: 170228114
+      Data4: -1599431400
+    Path: event:/Gameplay SFX/Collectible
+  Event: 
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
