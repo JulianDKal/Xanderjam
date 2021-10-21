@@ -6,14 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/JuJu/JuJu's TestScene.unity
-    guid: 8517a7ee4d05be94f9c9eb5bb13d62f6
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: cd6b928d9c6535545813ca08ce0bd7ff
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Level1.unity
+    guid: 01cdf29687f232845b0fe237ee9ab52b
+  - enabled: 1
+    path: Assets/JuJu/JuJu's TestScene.unity
+    guid: 8517a7ee4d05be94f9c9eb5bb13d62f6
+  - enabled: 1
+    path: Assets/Scenes/PauseMenu.unity
+    guid: 2d477777a0201a548b7deda17f5c632c
+  - enabled: 1
+    path: Assets/Scenes/SettingsScene.unity
+    guid: 56932b80c8ac43f47b19dcb92ccf4832
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 81ea3204a750da0448eb504ede9ae904

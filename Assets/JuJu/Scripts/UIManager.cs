@@ -15,5 +15,19 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }    
 
+    public void PlayLevel1()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void ReturnToPrevScene()
+    {
+        SceneManager.UnloadSceneAsync("SettingsScene");
+    }
+
+    public void Settings()
+    {
+        SceneManager.LoadSceneAsync("SettingsScene", LoadSceneMode.Additive);
+    }
 
 }

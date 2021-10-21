@@ -409,6 +409,7 @@ GameObject:
   - component: {fileID: 8578841159330225570}
   - component: {fileID: 4089492665750925264}
   - component: {fileID: 676728235006964336}
+  - component: {fileID: 8931785349734344538}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -584,6 +585,32 @@ MonoBehaviour:
   scoreText: {fileID: 9006009292753914348}
   collectablePrefab: {fileID: 6212816256424567035, guid: 765c704db5ce5488cbc7c9c567c540a2, type: 3}
   timeInBetween: 1
+--- !u!61 &8931785349734344538
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8684377370909571202}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0034609437, y: -0.01730442}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0.0625}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 1.5625}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.55172217, y: 1.0156827}
+  m_EdgeRadius: 0
 --- !u!1 &8684377370963149839
 GameObject:
   m_ObjectHideFlags: 0
