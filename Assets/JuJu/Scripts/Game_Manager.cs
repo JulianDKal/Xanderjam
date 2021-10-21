@@ -23,7 +23,7 @@ public class Game_Manager : MonoBehaviour
 
     public void PlayLevel(int levelIndex)
     {
-        LoadLevel(levelIndex);
+        StartCoroutine(LoadLevel(levelIndex));
     }
 
     public IEnumerator LoadLevel(int levelIndex)
