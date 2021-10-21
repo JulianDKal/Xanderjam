@@ -126,6 +126,14 @@ public class PlayerMovement : MonoBehaviour
             Game_Manager.instance.GameOver();
             currentTime = 0;
         };
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(!Game_Manager.gameIsPaused)
+            {
+                Game_Manager.instance.Pause();
+            }
+            else Game_Manager.instance.Resume();
+        }
     }
     //Execute code
     private void FixedUpdate()

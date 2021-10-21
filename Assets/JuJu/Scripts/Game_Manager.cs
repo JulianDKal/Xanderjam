@@ -10,7 +10,7 @@ public class Game_Manager : MonoBehaviour
     public delegate void StopGame();
     public static event StopGame onGameOver;
 
-    //private bool gameIsPaused;
+    public static bool gameIsPaused;
 
     private void Awake() {
         if(instance == null)
@@ -41,15 +41,21 @@ public class Game_Manager : MonoBehaviour
 
     public void Pause()
     {
-        //gameIsPaused = true;
-        SceneManager.LoadSceneAsync("Pause");
+        gameIsPaused = true;
+        SceneManager.LoadSceneAsync("PauseMenu", LoadSceneMode.Additive);
         Time.timeScale = 0;
     }
 
     public void Resume()
     {
-        //gameIsPaused = false;
-        SceneManager.UnloadSceneAsync("Pause");
-        Time.timeScale = 1;
+        
+        if(!SceneManager.GetSceneByName("SettingsScene").isLoaded)
+        {
+            gameIsPaused = false;
+            SceneManager.UnloadSceneAsync("PauseMenu");
+            Time.timeScale = 1;
+        }
+        else SceneManager.UnloadSceneAsync("SettingsScene");
+        
     }
 }

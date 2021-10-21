@@ -42,4 +42,9 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void Resume()
+    {
+        Game_Manager.instance.Resume();
+    }
+
 }
