@@ -583,7 +583,7 @@ MonoBehaviour:
   - {fileID: 0}
   scoreText: {fileID: 9006009292753914348}
   collectablePrefab: {fileID: 6212816256424567035, guid: 765c704db5ce5488cbc7c9c567c540a2, type: 3}
-  timeInBetween: 2
+  timeInBetween: 1
 --- !u!1 &8684377370963149839
 GameObject:
   m_ObjectHideFlags: 0

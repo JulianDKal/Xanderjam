@@ -31,6 +31,7 @@ public class CollectableManager : MonoBehaviour
         }
         if(other.CompareTag("Obstacle"))
         {
+            Destroy(other.gameObject);
             StartCoroutine("TakeDamage");
         }
         
