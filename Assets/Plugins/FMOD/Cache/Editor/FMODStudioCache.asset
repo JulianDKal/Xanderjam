@@ -51,7 +51,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -8454019034580873264}
+  - {fileID: -4853359910440044824}
   MinDistance: 1
   MaxDistance: 20
   Length: 22012
@@ -100,6 +100,30 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-8392095870930080674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Gameplay Music/Slow Down
+  m_EditorClassIdentifier: 
+  Name: Slow Down
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
   IsGlobal: 0
   Labels: []
   Exists: 1
@@ -178,7 +202,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1641151562039551893}
+  - {fileID: -4191522768924642949}
   MinDistance: 1
   MaxDistance: 20
   Length: 1121
@@ -284,6 +308,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-4853359910440044824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sand Filling/Sand
+  m_EditorClassIdentifier: 
+  Name: Sand
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-4691786267046983051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +402,30 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 2904288
+  Exists: 1
+--- !u!114 &-4191522768924642949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Glass Repair/Repair
+  m_EditorClassIdentifier: 
+  Name: Repair
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &-3256977210512286987
 MonoBehaviour:
@@ -519,8 +591,32 @@ MonoBehaviour:
   - {fileID: 4677425262230753392}
   StringsBanks:
   - {fileID: 5247633001469186886}
-  cacheTime: 637704148266980819
+  cacheTime: 637704240817255072
   cacheVersion: 9
+--- !u!114 &271549570555510721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Gameplay Music/Speed Up
+  m_EditorClassIdentifier: 
+  Name: Speed Up
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &312915680335126020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,8 +797,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -6755753675892798154}
-  - {fileID: -4936866402310701248}
+  - {fileID: -8392095870930080674}
+  - {fileID: 271549570555510721}
   MinDistance: 1
   MaxDistance: 20
   Length: 51200
@@ -844,7 +940,7 @@ MonoBehaviour:
   Path: Assets/Arani/HourglassJam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637704148266950817
+  lastModified: 637704240817215081
   FileSizes:
   - Name: Desktop
     Value: 2083808
@@ -915,7 +1011,7 @@ MonoBehaviour:
   Path: Assets/Arani/HourglassJam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637704148266980819
+  lastModified: 637704240817255072
   FileSizes:
   - Name: Desktop
     Value: 1828

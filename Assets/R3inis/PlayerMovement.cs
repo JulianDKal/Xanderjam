@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentTime = maxTime;
         col = GetComponent<Collider2D>();
-        jumpInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Gameplay SFX/Jump");
+        
     }
 
     //Animation/jumping
@@ -89,7 +89,9 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump"))
         {
             cayotyTimer = cayoty;
+            jumpInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Gameplay SFX/Jump");
             jumpInstance.start();
+            jumpInstance.release();
         }
         if(jumpCount < 1)
         {

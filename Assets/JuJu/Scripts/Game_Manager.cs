@@ -7,7 +7,10 @@ public class Game_Manager : MonoBehaviour
 {
     public static Game_Manager instance;
 
-    private bool gameIsPaused;
+    public delegate void StopGame();
+    public static event StopGame onGameOver;
+
+    //private bool gameIsPaused;
 
     private void Awake() {
         if(instance == null)
@@ -33,18 +36,19 @@ public class Game_Manager : MonoBehaviour
     {
         Time.timeScale = 0f;
         SceneManager.LoadSceneAsync("GameOver", LoadSceneMode.Additive);
+        if(onGameOver != null )onGameOver.Invoke();
     }
 
     public void Pause()
     {
-        gameIsPaused = true;
+        //gameIsPaused = true;
         SceneManager.LoadSceneAsync("Pause");
         Time.timeScale = 0;
     }
 
     public void Resume()
     {
-        gameIsPaused = false;
+        //gameIsPaused = false;
         SceneManager.UnloadSceneAsync("Pause");
         Time.timeScale = 1;
     }
