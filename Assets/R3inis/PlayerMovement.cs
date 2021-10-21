@@ -43,6 +43,9 @@ public class PlayerMovement : MonoBehaviour
     public Sprite jump;
     public Sprite fall;
 
+    //FMOD
+    private FMOD.Studio.EventInstance jumpInstance;
+
 
     //Get veriables
     private void Awake()
@@ -51,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentTime = maxTime;
         col = GetComponent<Collider2D>();
+        jumpInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Gameplay SFX/Jump");
     }
 
     //Animation/jumping
@@ -85,13 +89,14 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump"))
         {
             cayotyTimer = cayoty;
+            jumpInstance.start();
         }
         if(jumpCount < 1)
         {
             rememberTimer = remember;
         }
 
-        isGrounded = Physics2D.BoxCast(col.bounds.center, col.bounds.size, 0f, Vector2.down, .6f, whatIsGround);
+        isGrounded = Physics2D.BoxCast(col.bounds.center, col.bounds.size, 0f, Vector2.down, 0.35f, whatIsGround);
         Debug.DrawRay(col.bounds.center, Vector2.down * 5, Color.green);
         //Physics2D.OverlapBox(groundCheck.position, checkSize, whatIsGround);
         if (cayotyTimer > 0 && rememberTimer > 0)
@@ -111,10 +116,10 @@ public class PlayerMovement : MonoBehaviour
 
         currentTime -= Time.deltaTime * (float)(1 + ( 0.25 * Instantiator.cracksActive));
         timerText.text = Convert.ToString((int)currentTime);
-        if(currentTime <= 0)
+        if(currentTime < 0)
         {
             Game_Manager.instance.GameOver();
-            currentTime = 1000;
+            currentTime = 0;
         };
     }
     //Execute code

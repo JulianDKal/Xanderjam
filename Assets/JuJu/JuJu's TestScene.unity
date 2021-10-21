@@ -1671,6 +1671,7 @@ GameObject:
   - component: {fileID: 949354012}
   - component: {fileID: 949354013}
   - component: {fileID: 949354014}
+  - component: {fileID: 949354015}
   m_Layer: 0
   m_Name: HourGlass
   m_TagString: Untagged
@@ -1750,6 +1751,36 @@ MonoBehaviour:
     size: 1000
   crack: {fileID: 4427840328829430240, guid: d4178c3e8ea876745a7e38d7d4ea3e3c, type: 3}
   timeUntilNewCrack: 6
+--- !u!114 &949354015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949354011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 730098272
+      Data2: 1111048914
+      Data3: -2053801044
+      Data4: -624621855
+    Path: event:/Gameplay SFX/Sand Filling
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1033415391
 GameObject:
   m_ObjectHideFlags: 0
