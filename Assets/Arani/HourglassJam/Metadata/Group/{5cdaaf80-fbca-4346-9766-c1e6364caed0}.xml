@@ -7,6 +7,9 @@
 		<relationship name="automators">
 			<destination>{4da7ddf3-16f2-4cb7-85e6-5f409e17a2ac}</destination>
 		</relationship>
+		<relationship name="masters">
+			<destination>{3522626b-f1b7-4bab-b0d0-af6b12b536d7}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{607a668a-fc11-4eb6-8121-d87edd2a27d4}</destination>
 		</relationship>

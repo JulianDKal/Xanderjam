@@ -4,6 +4,9 @@
 		<property name="name">
 			<value>Fanfare</value>
 		</property>
+		<relationship name="masters">
+			<destination>{3522626b-f1b7-4bab-b0d0-af6b12b536d7}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{1cb4dc88-aebf-4e83-bee4-3dd4599cfb69}</destination>
 		</relationship>
