@@ -76,7 +76,7 @@ public class Instantiator : MonoBehaviour
         newObj.transform.position = spawnPos;
         newObj.transform.rotation = rotation;
         }
-        if(objectIndex % 3 == 0) objectDictionary[tag].Enqueue(newObj);
+        /*if(objectIndex % 3 == 0)*/ objectDictionary[tag].Enqueue(newObj);
     }
 
     private void Update() {
