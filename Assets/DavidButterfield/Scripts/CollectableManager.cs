@@ -30,16 +30,12 @@ public class CollectableManager : MonoBehaviour
             playerScore = playerScore + 1;
             scoreText.text = playerScore.ToString();
         }
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Obstacle"))
+        if(other.CompareTag("Obstacle"))
         {
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
             StartCoroutine("TakeDamage");
         }
+        
     }
 
     IEnumerator InstantiateCollectables()

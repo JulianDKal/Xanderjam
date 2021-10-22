@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    FMOD.Studio.EventInstance selectInstance;
-
     public void StartLevel(int levelIndex)
     {
         Game_Manager.instance.PlayLevel(levelIndex);
@@ -47,13 +45,6 @@ public class UIManager : MonoBehaviour
     public void Resume()
     {
         Game_Manager.instance.Resume();
-    }
-
-    public void PlaySelectSound()
-    {
-        selectInstance = FMODUnity.RuntimeManager.CreateInstance("event:/UI SFX/Menu - Level Select");
-        selectInstance.start();
-        selectInstance.release();
     }
 
 }
