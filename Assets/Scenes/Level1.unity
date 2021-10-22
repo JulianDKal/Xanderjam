@@ -34887,16 +34887,12 @@ PrefabInstance:
       value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 2686833972508719311, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 229.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 2686833972508719311, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 53
+      value: 38.055
       objectReference: {fileID: 0}
     - target: {fileID: 2686833972508719311, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5.2314
+      value: -5.2315
       objectReference: {fileID: 0}
     - target: {fileID: 3698323332423756891, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
       propertyPath: m_SizeDelta.x
@@ -34917,6 +34913,10 @@ PrefabInstance:
     - target: {fileID: 6505577977405493840, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578841159330225570, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
+      propertyPath: maxTime
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8578841159330225570, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
       propertyPath: jumpForce
@@ -35053,10 +35053,6 @@ PrefabInstance:
     - target: {fileID: 8719336762681392972, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
       propertyPath: m_Layer
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 9006009292753914348, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
-      propertyPath: m_Text
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc4307f6dfbc6314db0720c361bd1444, type: 3}
