@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentTime = maxTime;
         col = GetComponent<Collider2D>();
-        
+        Game_Manager.onGameOver += Die;
     }
 
     //Animation/jumping
@@ -158,5 +158,10 @@ public class PlayerMovement : MonoBehaviour
         {
             velX = 0;
         }
-    }   
+    }
+    
+    private void Die()
+    {
+        this.enabled = false;
+    }
 }
