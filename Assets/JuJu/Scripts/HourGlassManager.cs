@@ -31,4 +31,9 @@ public class HourGlassManager : MonoBehaviour
         gameMusicInstance.start();
         Game_Manager.onGameOver += GameWonSounds;
     }
+
+    private void OnDestroy()
+    {
+        gameMusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
 }
