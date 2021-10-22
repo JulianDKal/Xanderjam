@@ -30,4 +30,21 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadSceneAsync("SettingsScene", LoadSceneMode.Additive);
     }
 
+    public void BackToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void Retry()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Resume()
+    {
+        Game_Manager.instance.Resume();
+    }
+
 }

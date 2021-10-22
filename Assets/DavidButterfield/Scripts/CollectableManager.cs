@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CollectableManager : MonoBehaviour
 {
     
-    public int playerScore = 0;
+    public static int playerScore = 0;
     [SerializeField]
     private Transform[] platforms;
     [SerializeField]
@@ -18,6 +18,7 @@ public class CollectableManager : MonoBehaviour
 
     void Start()
     {
+        playerScore = 0;
         scoreText.text = playerScore.ToString();
         StartCoroutine("InstantiateCollectables");
     }

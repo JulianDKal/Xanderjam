@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentTime = maxTime;
         col = GetComponent<Collider2D>();
-        
+        Game_Manager.onGameOver += Die;
     }
 
     //Animation/jumping
@@ -126,6 +126,14 @@ public class PlayerMovement : MonoBehaviour
             Game_Manager.instance.GameOver();
             currentTime = 0;
         };
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(!Game_Manager.gameIsPaused)
+            {
+                Game_Manager.instance.Pause();
+            }
+            else Game_Manager.instance.Resume();
+        }
     }
     //Execute code
     private void FixedUpdate()
@@ -150,5 +158,10 @@ public class PlayerMovement : MonoBehaviour
         {
             velX = 0;
         }
-    }   
+    }
+    
+    private void Die()
+    {
+        this.enabled = false;
+    }
 }

@@ -51,7 +51,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 7182549603715455557}
+  - {fileID: -1822211631504964660}
   MinDistance: 1
   MaxDistance: 20
   Length: 22012
@@ -202,7 +202,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 3690964082658077500}
+  - {fileID: 8021043991297288013}
   MinDistance: 1
   MaxDistance: 20
   Length: 1121
@@ -526,6 +526,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-1822211631504964660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sand Filling/Sand
+  m_EditorClassIdentifier: 
+  Name: Sand
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-1641151562039551893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,7 +663,7 @@ MonoBehaviour:
   - {fileID: 4677425262230753392}
   StringsBanks:
   - {fileID: 5247633001469186886}
-  cacheTime: 637704306068002435
+  cacheTime: 637704621840167760
   cacheVersion: 9
 --- !u!114 &271549570555510721
 MonoBehaviour:
@@ -845,8 +869,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -2656413468525603636}
-  - {fileID: -3342681982163393518}
+  - {fileID: 7381433788056792096}
+  - {fileID: 4072455270676946688}
   MinDistance: 1
   MaxDistance: 20
   Length: 51200
@@ -973,6 +997,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4072455270676946688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Gameplay Music/Speed Up
+  m_EditorClassIdentifier: 
+  Name: Speed Up
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &4406909434631243452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1012,10 +1060,10 @@ MonoBehaviour:
   Path: Assets/Arani/HourglassJam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637704306067972435
+  lastModified: 637704621840137750
   FileSizes:
   - Name: Desktop
-    Value: 2083808
+    Value: 2084544
   Exists: 1
 --- !u!114 &4964110635308786225
 MonoBehaviour:
@@ -1083,10 +1131,10 @@ MonoBehaviour:
   Path: Assets/Arani/HourglassJam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637704306068002435
+  lastModified: 637704621840167760
   FileSizes:
   - Name: Desktop
-    Value: 1828
+    Value: 1962
   Exists: 1
 --- !u!114 &5297466315138003667
 MonoBehaviour:
@@ -1183,6 +1231,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7381433788056792096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Gameplay Music/Slow Down
+  m_EditorClassIdentifier: 
+  Name: Slow Down
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &7521871559748257164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1237,6 +1309,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8021043991297288013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Glass Repair/Repair
+  m_EditorClassIdentifier: 
+  Name: Repair
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &8443627152070216740
 MonoBehaviour:
   m_ObjectHideFlags: 0
