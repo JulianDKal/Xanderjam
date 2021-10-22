@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     //FMOD
     private FMOD.Studio.EventInstance jumpInstance;
+    private bool dead = false;
 
 
     //Get veriables
@@ -91,9 +92,12 @@ public class PlayerMovement : MonoBehaviour
             cayotyTimer = cayoty;
             if(jumpCount < 1)
             {
-            jumpInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Gameplay SFX/Jump");
-            jumpInstance.start();
-            jumpInstance.release();
+                if (!dead)
+                {
+                    jumpInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Gameplay SFX/Jump");
+                    jumpInstance.start();
+                    jumpInstance.release();
+                }  
             }
         }
         if(jumpCount < 1)
@@ -162,6 +166,6 @@ public class PlayerMovement : MonoBehaviour
     
     private void Die()
     {
-        this.enabled = false;
+        dead = true;
     }
 }
