@@ -123,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
         crackText.text = Instantiator.cracksActive.ToString();
 
         currentTime -= Time.deltaTime * (float)(1 + ( 0.25 * Instantiator.cracksActive));
-        timerText.text = Convert.ToString((int)currentTime);
+        timerText.text = "time"+Convert.ToString((int)currentTime);
         if(currentTime < 0)
         {
             Game_Manager.instance.GameOver();
